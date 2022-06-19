@@ -3,9 +3,11 @@ import './App.css'
 import TaskCreator from './components/TaskCreator'
 import TaskTable from './components/TaskTable'
 import { v4 as uuidv4 } from 'uuid'
+import VisibilityControl from './components/VisibilityControl'
 
 function App() {
 	const [tasks, setTasks] = useState([])
+	const [showCompleted, setShowCompleted] = useState(false)
 
 	useEffect(() => {
 		const data = localStorage.getItem('tasks')
@@ -33,10 +35,22 @@ function App() {
 		setTasks(tasks.map(task => task.id === taskId ? { ...task, done: !task.done } : task))
 	}
 
+	const deleteDoneTasks = () => {
+		setTasks(tasks.filter(task => !task.done))
+	}
+
 	return (
 		<div className="App">
 			<TaskCreator createTask={createTask} />
 			<TaskTable tasks={tasks} toggleTask={toggleTask} />
+
+			<VisibilityControl setShowCompleted={(checked) => setShowCompleted(checked)} deleteDoneTasks={deleteDoneTasks} />
+
+			{
+				showCompleted && (
+					<TaskTable tasks={tasks} toggleTask={toggleTask} showCompleted={showCompleted} />
+				)
+			}
 		</div>
 	)
 }
