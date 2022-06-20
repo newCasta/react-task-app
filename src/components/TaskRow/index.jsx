@@ -1,8 +1,10 @@
+import './index.css'
+
 const TaskRow = ({ task, toggleTask }) => {
     return (
-        <tr>
+        <tr className="TableRow">
             <td>
-                {task.name}
+                <div>{task.name}</div>
                 <input type="checkbox" checked={task.done} onChange={() => toggleTask(task.id)} />
             </td>
         </tr>

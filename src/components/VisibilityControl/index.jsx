@@ -14,8 +14,8 @@ const VisibilityControl = ({ setShowCompleted, deleteDoneTasks }) => {
 
     return (
         <div className='VisibilityControl'>
-            <input type="checkbox" id='show-done' onChange={() => setShowCompleted(inputRef.current.checked)} ref={inputRef} />
-            <label htmlFor="show-done">{inputRef.current.checked ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}</label>
+            <input type="checkbox" id='show-done' onChange={() => setShowCompleted(inputRef.current?.checked)} ref={inputRef} />
+            <label htmlFor="show-done">{inputRef.current?.checked ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}</label>
             <button onClick={handleDelete}><FontAwesomeIcon icon={faBan} /></button>
         </div>
     )

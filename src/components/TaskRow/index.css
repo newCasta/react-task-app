@@ -1,0 +1,13 @@
+.TableRow td div {
+	padding-block: 20px;
+	inline-size: 100%;
+	overflow-wrap: break-word;
+	width: 90%;
+	height: 100%;
+}
+
+.TableRow td {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

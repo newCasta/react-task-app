@@ -1,3 +1,4 @@
+import './index.css'
 import { useState } from 'react'
 
 const TaskCreator = ({ createTask }) => {
@@ -10,7 +11,7 @@ const TaskCreator = ({ createTask }) => {
     }
 
     return (
-        <div>
+        <div className='TaskCreator'>
             <form onSubmit={handleSubmit}>
                 <input type='text' placeholder='Enter a new task' onChange={(e) => setNewTask(e.target.value)} value={newTask} />
                 <button>Save Task</button>

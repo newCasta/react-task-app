@@ -1,4 +1,5 @@
 import TaskRow from "../TaskRow"
+import './index.css'
 
 const TaskTable = ({ tasks, toggleTask, showCompleted = false }) => {
     const taskTableRows = (done) => {
@@ -20,7 +21,7 @@ const TaskTable = ({ tasks, toggleTask, showCompleted = false }) => {
     }
 
     return (
-        <table>
+        <table className="TaskTable">
             <thead>
                 <tr>
                     <th>{tableTitle(showCompleted)}</th>

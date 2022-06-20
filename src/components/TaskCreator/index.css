@@ -1,0 +1,30 @@
+.TaskCreator {
+	width: 100%;
+	margin-block: 50px;
+}
+
+.TaskCreator form {
+	display: flex;
+	justify-content: space-around;
+}
+
+.TaskCreator input {
+	width: 70%;
+	padding: 10px;
+	border: 1px solid #ffffff;
+	font-size: 15px;
+	border-radius: 5px;
+	font-family: "Inter";
+	outline: none;
+}
+
+.TaskCreator button {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	background: #00b894;
+	font-size: 15px;
+	color: #2d3436;
+}

@@ -1,0 +1,20 @@
+.TaskTable {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.TaskTable thead {
+	font-size: 30px;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.TaskTable tbody {
+	margin-top: 20px;
+	font-size: 20px;
+	color: rgb(160, 160, 160);
+	display: flex;
+	flex-direction: column;
+}
